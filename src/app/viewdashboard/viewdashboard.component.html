@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-secondary">
+    <div class="container-fluid">
+        <h3 style="color:aliceblue">Welcome to EmployeeDashBoard</h3>
+        <a routerLink="/view" style="color:black">View DashBoard</a>
+        <a routerLink="/addemployee" style="color:black">Add Employee</a>
+    </div>
+</nav>
+<table class="table" >
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+             
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let employee of EmployeesData">
+        <tr>
+            <th>{{employee.EmpID}}</th>
+            <th>{{employee.EmpFname}}</th>
+            <td>
+                <button class="btn btn-info">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
